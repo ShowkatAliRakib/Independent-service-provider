@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        < div className='header'>
         <Navbar collapseOnSelect expand="lg" sticky='top' bg="dark" variant="dark">
           <Container>
             <Navbar.Brand as={Link} to="/"> 
@@ -21,13 +21,13 @@ const Header = () => {
               </Nav>
               <Nav>
                 <Nav.Link as={Link} to="/aboutMe">About me</Nav.Link>
-                <Nav.Link as={Link} to="/register">Register</Nav.Link>
+                <Nav.Link as={Link} to="/login">Log in</Nav.Link>
                 
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </div>
+      </ div>
     );
 };
 
