@@ -8,8 +8,10 @@ import Home from './Components/Pages/Home/Home';
 import NotFound from './Components/Shared/NotFound/NotFound';
 import Blogs from './Components/Pages/Blogs/Blogs';
 import AboutMe from './Components/Pages/AboutMe/AboutMe';
-import Register from './Components/Pages/Register/Register';
 import Login from './Components/Pages/Login/Login';
+import Register from './Components/Pages/Register/Register';
+import Appointment from './Components/Pages/Appointment/Appointment';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -21,8 +23,12 @@ function App() {
           <Route path='/blogs' element={<Blogs></Blogs>} ></Route>
 
           <Route path='/aboutMe' element={<AboutMe></AboutMe>} ></Route>
-          {/* <Route path='/register' element={<Register></Register>} ></Route> */}
+          <Route path='/register' element={<Register></Register>} ></Route>
           <Route path='/login' element={<Login></Login>} ></Route>
+          <Route path='/appointment' element={ <RequireAuth>
+            <Appointment></Appointment>
+          </RequireAuth>
+         } ></Route>
 
 
 

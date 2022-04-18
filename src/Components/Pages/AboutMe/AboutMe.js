@@ -1,9 +1,12 @@
 import React from 'react';
+import Rakib from '../../../image/me/Rakib.png'
 
 const AboutMe = () => {
     return (
         <div>
-            <h1>aboutMe</h1>
+            <div>
+                <img className='w-50' src= {Rakib} alt="" srcset="" />
+            </div>
             
         </div>
     );

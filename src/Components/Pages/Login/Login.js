@@ -1,47 +1,65 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import { Form } from 'react-bootstrap';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../Firebase/firebase.init';
 
 const Login = () => {
-  const [email, setEmail]= useState('');
-  const [password, setPassword]= useState('');
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
 
-  const handleEmail= (e)=>{
-    setEmail(e.target.name.value)
-  }
 
-  const handlePassword=(e)=>{
-    setPassword(e.target.name.value)
-  }
+  const navigate = useNavigate();
+
+
+
+
+const navigateRegister = () => {
+  navigate("/register");
+};
+
+
+// if (user) {
+   
+//   navigate("/appointment");
+// };
+
+
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const email = event.target.email.value;
+  const password = event.target.password.value;
+
+
 
   
 
-  const handleSubmit= (e)=>{
-    e.preventDefault()
-    console.log( email, password);
-  }
-
-
-
-
-
+};
 
     return (
-        <div className="container w-50 mx-auto m-5 p-5">
+        <div className=" w-50 mx-auto m-5 p-5">
             <Form onSubmit={handleSubmit}>
   <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" name="email" onChange={handleEmail} className="form-label">Email address</label>
+    <label htmlFor="exampleInputEmail1" name="email" className="form-label">Email address</label>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+  
   </div>
   <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" name="password" onChange={handlePassword} className="form-label">Password</label>
+    <label htmlFor="exampleInputPassword1" name="password"  className="form-label">Password</label>
     <input type="password" className="form-control" id="exampleInputPassword1"/>
   </div>
-  <div className="mb-3 form-check">
-    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
+  
+ { user ?  <button type="submit"  className="btn btn-primary">Log out</button> :
+ 
+ <button type="submit"  className="btn btn-primary">Log in</button>
+}
+
+  <p>Have a no Account? <Link to="/register" className="text-primary pe-auto text-decoration-none" onClick={navigateRegister}>Please Register</Link></p>
 </Form>
         </div>
     );

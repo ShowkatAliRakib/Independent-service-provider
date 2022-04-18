@@ -2,5 +2,13 @@
     width: 100%;
 }
 .card button{
+    
+    position: absolute;
     bottom:0;
+    margin-top: 20px;
+}
+.card {
+    height:470px;
+    padding: 20px;
+    margin: 5px;
 }

@@ -13,10 +13,10 @@ const Services = () => {
     return (
         <div>
             
-            <div>
+            <div id='services'>
                 
             <h1  className='text-center'>My Services</h1>
-            <div className="container">
+            <div className="container relative">
 
           
                     {
