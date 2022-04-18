@@ -27,11 +27,11 @@ const SocialLogin = () => {
   return (
     <div>
       <div className="d-flex align-Item-center">
-        <div style={{ height: "1px" }} className="bg-primary w-50">
+        <div style={{ height: "1px" }} className="bg-secondary w-50">
           {" "}
         </div>
         <p>or</p>
-        <div style={{ height: "1px" }} className="bg-primary w-50">
+        <div style={{ height: "1px" }} className="bg-secondary w-50">
           {" "}
         </div>
       </div>
