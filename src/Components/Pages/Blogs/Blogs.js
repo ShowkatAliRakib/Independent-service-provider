@@ -18,7 +18,7 @@ const Blogs = () => {
       </p>
     </div> 
     <hr />
-               <div>
+    <div>
         <h1> Question no 02- 
 
 Firebase কেন us করা উচিত?  
@@ -30,23 +30,9 @@ Firebase কেন us করা উচিত?
       </p>
     </div> 
     <hr />
-               <div>
-        <h1> Question no 03- Authentication ছাড়া firebase আর কি কি করা যায়? </h1>
-      <p>
-       <h2> Ans - </h2>
-       ★ NativeScript.
-       ★ Back4App. .
-       ★AWS Amplify.
-
-       
-
-       ★RxDB.
-       ★Flutter.
-    
-      </p>
-    </div> 
-    <hr />
+   
       
+    
 
 
 
