@@ -39,7 +39,7 @@ const Register = () => {
     };
     return (
         <div className="register-form">
-        <h1 className=" text-center text-primary">Please Register</h1>
+        <h1 className=" text-center text-secondary">Please Register</h1>
         <form onSubmit={handleRegister}>
           <input type="text" name="name" id="" placeholder="Your Name" />
   
@@ -62,7 +62,7 @@ const Register = () => {
          
        
           <input
-            className="btn btn-primary mx-auto w-50 d-block "
+            className="btn btn-secondary mx-auto w-50 d-block "
             type="submit"
             value="Register"
           />

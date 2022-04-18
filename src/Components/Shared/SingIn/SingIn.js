@@ -40,7 +40,7 @@ const SingIn = () => {
       <div>
         <button
         onClick={() => signInWithGoogle()}
-         className="btn btn-info w-50 d-block mx-auto my-2">
+         className="btn btn-secondary w-50 d-block mx-auto my-2">
           <img className="image-icon" src={google} alt="" srcset="" />
           <span className="px-2"> Google Sing In</span>
         </button>

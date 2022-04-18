@@ -43,6 +43,7 @@ const handleSubmit = async (event) => {
 
     return (
         <div className=" w-50 mx-auto m-5 p-5">
+           <h1 className=" text-center text-secondary">Please Login</h1>
             <Form onSubmit={handleSubmit}>
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" name="email" className="form-label">Email address</label>
@@ -54,9 +55,9 @@ const handleSubmit = async (event) => {
     <input type="password" className="form-control" id="exampleInputPassword1"/>
   </div>
   
- { user ?  <button type="submit"  className="btn btn-primary">Log out</button> :
+ { user ?  <button type="submit"  className="btn btn-secondary">Log out</button> :
  
- <button type="submit"  className="btn btn-primary">Log in</button>
+ <button type="submit"  className="btn btn-secondary">Log in</button>
 }
 
   <p>Have a no Account? <Link to="/register" className="text-primary pe-auto text-decoration-none" onClick={navigateRegister}>Please Register</Link></p>
