@@ -1,12 +1,11 @@
 import React from "react";
-import "./SocialLogin.css";
 import google from "../../../image/logo/google.png";
 
 import {useSignInWithGoogle } from "react-firebase-hooks/auth";
-import auth from "../../../firebase.init";
+import auth from "../../../Firebase/firebase.init";
 import { useNavigate } from "react-router-dom";
 
-const SocialLogin = () => {
+const SingIn = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
   let errorElement;
@@ -51,4 +50,4 @@ const SocialLogin = () => {
   );
 };
 
-export default SocialLogin;
+export default SingIn;

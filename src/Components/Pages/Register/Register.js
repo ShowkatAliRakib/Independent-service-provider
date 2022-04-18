@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import auth from "../../../Firebase/firebase.init";
 import { useCreateUserWithEmailAndPassword,} from "react-firebase-hooks/auth";
+import SingIn from "../../Shared/SingIn/SingIn";
 
 const Register = () => {
 
@@ -76,7 +77,7 @@ const Register = () => {
             </Link>
           </p>
         </form>
-        
+        <SingIn></SingIn>
       </div>
     );
 };
