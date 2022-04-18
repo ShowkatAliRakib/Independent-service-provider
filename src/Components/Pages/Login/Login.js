@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/firebase.init';
+import SingIn from '../../Shared/SingIn/SingIn';
 
 const Login = () => {
   const [
@@ -62,6 +63,8 @@ const handleSubmit = async (event) => {
 
   <p>Have a no Account? <Link to="/register" className="text-primary pe-auto text-decoration-none" onClick={navigateRegister}>Please Register</Link></p>
 </Form>
+
+<SingIn></SingIn>
         </div>
     );
 };

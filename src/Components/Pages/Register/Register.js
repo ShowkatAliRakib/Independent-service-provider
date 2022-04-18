@@ -38,7 +38,8 @@ const Register = () => {
   
     };
     return (
-        <div className="register-form">
+        <div  className="  m-5 p-5">
+            <div  className="register-form ">
         <h1 className=" text-center text-secondary">Please Register</h1>
         <form onSubmit={handleRegister}>
           <input type="text" name="name" id="" placeholder="Your Name" />
@@ -79,6 +80,7 @@ const Register = () => {
         </form>
         <SingIn></SingIn>
       </div>
+        </div>
     );
 };
 
