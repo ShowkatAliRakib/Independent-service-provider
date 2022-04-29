@@ -1,13 +1,11 @@
 import React from 'react';
-import sleeping from '../../../images/404.jpg'
+import sleeping from '../../../images/sleeping.jpg';
 
 const NotFound = () => {
     return (
         <div>
-            <h1 className='text-danger text-center' >404 , NOT FOUND</h1>
-            <img src={sleeping} className='w-100' alt="" srcSet="" />
-
-            <h1 className='text-danger text-center'>Mechanic sleeping</h1>
+            <h2 className='text-primary text-center'>Mechanic is sleeping</h2>
+            <img className='w-100' src={sleeping} alt="" />
         </div>
     );
 };
